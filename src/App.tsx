@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import Outcomes from "./pages/Outcomes";
 import About from "./pages/About";
 import LifeLog from "./pages/LifeLog";
 import Community from "./pages/Community";
@@ -26,10 +27,10 @@ function App() {
                   Home
                 </Link>
                 <Link
-                  to="/about"
+                  to="/outcomes"
                   className="text-gray-700 hover:text-indigo-600 font-medium"
                 >
-                  About
+                  Outcomes
                 </Link>
                 <Link
                   to="/life-log"
@@ -43,6 +44,12 @@ function App() {
                 >
                   Community
                 </Link>
+                <Link
+                  to="/about"
+                  className="text-gray-700 hover:text-indigo-600 font-medium"
+                >
+                  About
+                </Link>
               </div>
             </div>
           </div>
@@ -50,6 +57,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/outcomes" element={<Outcomes />} />
           <Route path="/about" element={<About />} />
           <Route path="/life-log" element={<LifeLog />} />
           <Route path="/community" element={<Community />} />
