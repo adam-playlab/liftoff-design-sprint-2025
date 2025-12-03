@@ -28,10 +28,9 @@ export default function LearningExperience() {
               <h4 className="font-bold text-gray-900 mb-2">Projects</h4>
               <p className="text-gray-600">
                 Deep, hands-on learning tasks that can be{" "}
-                <strong>Individual</strong>,{" "}
-                <strong>Community-driven</strong> (addressing real community
-                needs), or <strong>Peer-driven</strong> (collaborative
-                problem-solving).
+                <strong>Individual</strong>, <strong>Community-driven</strong>{" "}
+                (addressing real community needs), or{" "}
+                <strong>Peer-driven</strong> (collaborative problem-solving).
               </p>
             </div>
 
@@ -52,7 +51,7 @@ export default function LearningExperience() {
                 Opportunities for advanced learning, including{" "}
                 <strong>External on college campuses</strong> or taking{" "}
                 <strong>Stackable, credentialed courses</strong> that grant high
-                school credit for real-world experience.
+                school and/or college credit for real-world experience.
               </p>
             </div>
 
