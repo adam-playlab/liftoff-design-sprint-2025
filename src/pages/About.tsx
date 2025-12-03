@@ -1,6 +1,68 @@
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Challenge Summary */}
+      <section className="mb-16">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
+          ⭐ Challenge Summary
+        </h1>
+        <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+          Young people are entering adulthood at a moment of unprecedented
+          complexity, uncertainty, and technological change. Traditional high
+          school was not built for this reality. It assumes stability,
+          prioritizes content delivery over thinking and being, and measures
+          progress by compliance rather than mastery.
+        </p>
+
+        <p className="text-lg text-gray-700 mb-4">As a result:</p>
+        <ul className="space-y-3 text-lg text-gray-700 mb-6">
+          <li className="flex items-start">
+            <span className="text-indigo-600 mr-3">•</span>
+            <span>
+              Students feel unprepared and disconnected—from their learning,
+              their future, and their communities.
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-indigo-600 mr-3">•</span>
+            <span>
+              The pace of change (AI, climate, politics, the workforce) makes
+              "preparation for life" a constantly shifting target.
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-indigo-600 mr-3">•</span>
+            <span>
+              Pathways into adulthood are more varied, more dynamic, and less
+              linear, requiring autonomy, adaptability, and social capital—not
+              just academics.
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-indigo-600 mr-3">•</span>
+            <span>
+              Entry-level jobs are disappearing, literacy gaps are widening, and
+              durable skills remain underdeveloped.
+            </span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-indigo-600 mr-3">•</span>
+            <span>
+              Young people—especially those furthest from opportunity—lack
+              real-world experience, networks, and confidence to navigate what
+              comes next.
+            </span>
+          </li>
+        </ul>
+
+        <p className="text-lg text-gray-700 italic font-medium">
+          In short: school is not preparing young people for life, and life is
+          moving faster than school can keep up.
+        </p>
+      </section>
+
+      <hr className="border-gray-200 mb-16" />
+
       {/* Core Promise */}
       <section className="mb-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
