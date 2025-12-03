@@ -9,11 +9,10 @@ export default function LifeLog() {
       <iframe
         src="https://claude.site/public/artifacts/1fe1b104-9d9a-4f53-87f2-413d2a847c7f/embed"
         title="Claude Artifact"
-        className="flex-1 w-full"
-        frameborder="0"
+        className="flex-1 w-full border-0"
         allow="clipboard-write"
-        allowfullscreen
-      ></iframe>
+        allowFullScreen
+      />
     </div>
   );
 }

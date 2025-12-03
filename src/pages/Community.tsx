@@ -9,11 +9,10 @@ export default function Community() {
       <iframe
         src="https://claude.site/public/artifacts/d556136b-6a77-4a29-a78a-c4c7eb4db678/embed"
         title="Claude Artifact"
-        className="flex-1 w-full"
-        frameBorder="0"
+        className="flex-1 w-full border-0"
         allow="clipboard-write"
         allowFullScreen
-      ></iframe>
+      />
     </div>
   );
 }
