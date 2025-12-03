@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Outcomes from "./pages/Outcomes";
+import LearningExperience from "./pages/LearningExperience";
 import About from "./pages/About";
 import LifeLog from "./pages/LifeLog";
 import Community from "./pages/Community";
@@ -33,6 +34,12 @@ function App() {
                   Outcomes
                 </Link>
                 <Link
+                  to="/learning-experience"
+                  className="text-gray-700 hover:text-indigo-600 font-medium"
+                >
+                  Learning Experience
+                </Link>
+                <Link
                   to="/life-log"
                   className="text-gray-700 hover:text-indigo-600 font-medium"
                 >
@@ -58,6 +65,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/outcomes" element={<Outcomes />} />
+          <Route path="/learning-experience" element={<LearningExperience />} />
           <Route path="/about" element={<About />} />
           <Route path="/life-log" element={<LifeLog />} />
           <Route path="/community" element={<Community />} />
