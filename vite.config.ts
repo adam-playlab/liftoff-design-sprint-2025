@@ -6,4 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss(), react()],
   base: '/liftoff-design-sprint-2025/',
+  server: {
+    allowedHosts: ['adam-liftoff.ngrok.app'],
+  },
 })
