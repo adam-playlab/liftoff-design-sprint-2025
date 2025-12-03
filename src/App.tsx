@@ -17,7 +17,7 @@ function App() {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <Link to="/" className="text-2xl font-bold text-indigo-600">
-                  The School of the Future
+                  Life Lab
                 </Link>
               </div>
               <div className="hidden md:flex space-x-8">
@@ -75,7 +75,7 @@ function App() {
         <footer className="bg-gray-900 text-white py-8 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-gray-400">
-              &copy; 2025 The School of the Future. All rights reserved.
+              &copy; 2025 Life Lab. All rights reserved.
             </p>
           </div>
         </footer>
