@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center">
           <h1 className="text-6xl sm:text-7xl font-black mb-4 bg-linear-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
             Life Lab
@@ -23,6 +23,17 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center">
+        <video
+          src={`${import.meta.env.BASE_URL}videos/lifelab.mp4`}
+          className="rounded-xl shadow-lg max-w-[800px] w-full"
+          controls
+          autoPlay
+          muted
+          loop
+        />
+      </div>
+
+      <div className="mt-12 flex justify-center">
         <img
           src={`${import.meta.env.BASE_URL}images/img1.png`}
           className="rounded-xl shadow-lg max-w-[800px] w-full"
