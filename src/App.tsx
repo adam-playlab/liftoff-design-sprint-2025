@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Outcomes from "./pages/Outcomes";
@@ -10,174 +10,116 @@ import About from "./pages/About";
 import LifeLog from "./pages/LifeLog";
 import Community from "./pages/Community";
 
-function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/outcomes", label: "Outcomes" },
+  { to: "/learning-experience", label: "Learning Experience" },
+  { to: "/assessments", label: "Assessments" },
+  { to: "/technology", label: "Technology" },
+  { to: "/life-log", label: "Life Log" },
+  { to: "/community", label: "Community" },
+  { to: "/about", label: "About" },
+];
 
+function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
+
+  return (
+    <nav className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold text-indigo-600">
+              LifeLab
+            </Link>
+          </div>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+          {/* Desktop navigation */}
+          <div className="hidden md:flex space-x-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`px-3 py-1.5 rounded-md font-medium ${
+                  isActive(link.to)
+                    ? "bg-indigo-100 text-indigo-700"
+                    : "text-gray-700 hover:bg-gray-100 hover:text-indigo-600"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-gray-200">
+          <div className="px-4 py-2 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`block px-3 py-2 rounded-md font-medium ${
+                  isActive(link.to)
+                    ? "bg-indigo-100 text-indigo-700"
+                    : "text-gray-700 hover:bg-gray-100 hover:text-indigo-600"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
+
+function App() {
   return (
     <HashRouter>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        {/* Navigation */}
-        <nav className="bg-white shadow-md">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Link to="/" className="text-2xl font-bold text-indigo-600">
-                  LifeLab
-                </Link>
-              </div>
-              {/* Mobile menu button */}
-              <button
-                className="md:hidden p-2"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {mobileMenuOpen ? (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </button>
-              {/* Desktop navigation */}
-              <div className="hidden md:flex space-x-8">
-                <Link
-                  to="/"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/outcomes"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Outcomes
-                </Link>
-                <Link
-                  to="/learning-experience"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Learning Experience
-                </Link>
-                <Link
-                  to="/assessments"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Assessments
-                </Link>
-                <Link
-                  to="/technology"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Technology
-                </Link>
-                <Link
-                  to="/life-log"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Life Log
-                </Link>
-                <Link
-                  to="/community"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  Community
-                </Link>
-                <Link
-                  to="/about"
-                  className="text-gray-700 hover:text-indigo-600 font-medium"
-                >
-                  About
-                </Link>
-              </div>
-            </div>
-          </div>
-          {/* Mobile menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200">
-              <div className="px-4 py-2 space-y-1">
-                <Link
-                  to="/"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/outcomes"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Outcomes
-                </Link>
-                <Link
-                  to="/learning-experience"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Learning Experience
-                </Link>
-                <Link
-                  to="/assessments"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Assessments
-                </Link>
-                <Link
-                  to="/technology"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Technology
-                </Link>
-                <Link
-                  to="/life-log"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Life Log
-                </Link>
-                <Link
-                  to="/community"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Community
-                </Link>
-                <Link
-                  to="/about"
-                  className="block py-2 text-gray-700 hover:text-indigo-600 font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
-              </div>
-            </div>
-          )}
-        </nav>
+        <Navigation />
 
         <Routes>
           <Route path="/" element={<Home />} />

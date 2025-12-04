@@ -8,8 +8,8 @@ export default function Home() {
             LifeLab
           </h1>
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
-            We prepare you for life—with real opportunities, real skills, and
-            real community.
+            We prepare you for life—with real opportunities,
+            <br /> real skills, and real community.
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Our purpose is to launch every young person into opportunity by
