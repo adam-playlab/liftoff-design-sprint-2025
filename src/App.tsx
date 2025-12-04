@@ -4,7 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Outcomes from "./pages/Outcomes";
 import LearningExperience from "./pages/LearningExperience";
-import Assessments from "./pages/Assessments";
+import SupportSystems from "./pages/SupportSystems";
 import Technology from "./pages/Technology";
 import LifeLog from "./pages/LifeLog";
 import Impact from "./pages/Impact";
@@ -13,7 +13,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/outcomes", label: "Outcomes" },
   { to: "/learning-experience", label: "Learning Experience" },
-  { to: "/assessments", label: "Assessments" },
+  { to: "/support-systems", label: "Support Systems" },
   { to: "/technology", label: "Technology" },
   { to: "/life-log", label: "LifeLog" },
   { to: "/impact", label: "Impact" },
@@ -123,7 +123,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/outcomes" element={<Outcomes />} />
           <Route path="/learning-experience" element={<LearningExperience />} />
-          <Route path="/assessments" element={<Assessments />} />
+          <Route path="/support-systems" element={<SupportSystems />} />
           <Route path="/technology" element={<Technology />} />
           <Route path="/life-log" element={<LifeLog />} />
           <Route path="/impact" element={<Impact />} />
