@@ -115,7 +115,7 @@ export default function SupportSystems() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-5 py-16">
+    <section className="max-w-6xl mx-auto px-5 py-8">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-3">
           The Learning Ecosystem
