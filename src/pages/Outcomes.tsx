@@ -29,7 +29,7 @@ export default function Outcomes() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
           Learning Outcomes
@@ -45,7 +45,9 @@ export default function Outcomes() {
         <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
           <thead className="bg-indigo-600 text-white">
             <tr>
-              <th className="px-6 py-4 text-left font-semibold">Outcome Area</th>
+              <th className="px-6 py-4 text-left font-semibold">
+                Outcome Area
+              </th>
               <th className="px-6 py-4 text-left font-semibold">Description</th>
               <th className="px-6 py-4 text-left font-semibold">Focus</th>
             </tr>
@@ -59,7 +61,9 @@ export default function Outcomes() {
                 <td className="px-6 py-4 font-bold text-gray-900">
                   {outcome.area}
                 </td>
-                <td className="px-6 py-4 text-gray-600">{outcome.description}</td>
+                <td className="px-6 py-4 text-gray-600">
+                  {outcome.description}
+                </td>
                 <td className="px-6 py-4 text-gray-600">{outcome.focus}</td>
               </tr>
             ))}

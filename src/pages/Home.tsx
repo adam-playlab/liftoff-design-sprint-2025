@@ -8,7 +8,7 @@ export default function Home() {
             LifeLab
           </h1>
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
-            We prepare you for life—with real opportunities,
+            We prepare learners for life—with real opportunities,
             <br />
             real skills, and real community.
           </h2>
