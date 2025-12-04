@@ -48,6 +48,7 @@ export default function Home() {
           className="rounded-xl shadow-lg max-w-[800px] w-full"
           controls
           autoPlay
+          playsInline
           muted
           loop
         />
