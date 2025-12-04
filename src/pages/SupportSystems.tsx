@@ -10,13 +10,12 @@ export default function SupportSystems() {
     },
     {
       title: "Coaches",
-      description:
-        "who develop thinking, resilience, reflection, and identity",
+      description: "who develop thinking, resilience, reflection, and identity",
     },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
           A New Role for Adults: Navigators, Mentors, Coaches

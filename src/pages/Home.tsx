@@ -42,10 +42,17 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="mb-12 flex justify-center">
+        <img
+          src={`${import.meta.env.BASE_URL}images/home-page.png`}
+          className="rounded-xl shadow-lg max-w-[1000px] w-full"
+        />
+      </div>
+
       <div className="flex justify-center">
         <video
           src={`${import.meta.env.BASE_URL}videos/lifelab.mp4`}
-          className="rounded-xl shadow-lg max-w-[800px] w-full"
+          className="rounded-xl shadow-lg max-w-[1000px] w-full"
           controls
           autoPlay
           playsInline
@@ -55,17 +62,16 @@ export default function Home() {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <img
-          src={`${import.meta.env.BASE_URL}images/img1.png`}
-          className="rounded-xl shadow-lg max-w-[800px] w-full"
-        />
-      </div>
-
-      <div className="mt-12 flex justify-center">
-        <img
-          src={`${import.meta.env.BASE_URL}images/img2.png`}
-          className="rounded-xl shadow-lg max-w-[800px] w-full"
-        />
+        <div className="flex gap-4 max-w-[1000px] w-full px-4">
+          <img
+            src={`${import.meta.env.BASE_URL}images/img1.png`}
+            className="rounded-xl shadow-lg w-1/2"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}images/img2.png`}
+            className="rounded-xl shadow-lg w-1/2"
+          />
+        </div>
       </div>
     </>
   );
