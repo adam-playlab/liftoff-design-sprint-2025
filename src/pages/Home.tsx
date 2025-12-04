@@ -9,16 +9,36 @@ export default function Home() {
           </h1>
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">
             We prepare you for life—with real opportunities,
-            <br /> real skills, and real community.
+            <br />
+            real skills, and real community.
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Our purpose is to launch every young person into opportunity by
-            preparing them for life and careers of the future. We do this
-            through real-world learning, practical skills, caring mentorship,
-            and meaningful choices that build agency, adaptability, belonging,
-            and lifelong confidence—so they can contribute to their communities
-            and shape a better future for all.
+            We launch every young person into opportunity by preparing them for
+            life and careers of the future. We help students navigate a rapidly
+            changing world, contribute to their communities and shape a better
+            future for all.
           </p>
+          <div className="max-w-2xl mx-auto text-left mt-8 mb-10">
+            <p className="text-lg font-semibold text-gray-800 mb-4">
+              We promise every learner:
+            </p>
+            <ul className="text-gray-600 space-y-2 list-disc list-inside">
+            <li>A life plan they own, co-designed with mentors</li>
+            <li>
+              Real experience before they enter the workforce or higher
+              education
+            </li>
+            <li>Skills that endure even as the world shifts</li>
+            <li>
+              Belonging and purpose grounded in identity, community, and
+              contribution
+            </li>
+            <li>
+              Confidence and resilience to learn, adapt, and thrive—no matter
+              what the future holds
+            </li>
+            </ul>
+          </div>
         </div>
       </section>
 
