@@ -20,7 +20,7 @@ export default function Technology() {
     },
     {
       title: "Learning and Employment Record",
-      description: "Stores the Learning and Employment Record in the Life Log.",
+      description: "Stores the Learning and Employment Record in the LifeLog.",
     },
   ];
 
@@ -80,11 +80,11 @@ export default function Technology() {
           </ul>
         </div>
 
-        {/* Life Log */}
+        {/* LifeLog */}
         <div className="bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Life Log</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">LifeLog</h3>
           <p className="text-gray-600 mb-6">
-            The Life Log is a secure, digital wallet platform that collects all
+            The LifeLog is a secure, digital wallet platform that collects all
             evidence of a learner's development and achievement. It functions as
             a comprehensive, shareable digital transcript.
           </p>
