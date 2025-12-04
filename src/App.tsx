@@ -7,7 +7,7 @@ import LearningExperience from "./pages/LearningExperience";
 import Assessments from "./pages/Assessments";
 import Technology from "./pages/Technology";
 import LifeLog from "./pages/LifeLog";
-import Community from "./pages/Community";
+import Results from "./pages/Results";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -16,7 +16,7 @@ const navLinks = [
   { to: "/assessments", label: "Assessments" },
   { to: "/technology", label: "Technology" },
   { to: "/life-log", label: "LifeLog" },
-  { to: "/community", label: "Community" },
+  { to: "/results", label: "Results" },
 ];
 
 function Navigation() {
@@ -126,7 +126,7 @@ function App() {
           <Route path="/assessments" element={<Assessments />} />
           <Route path="/technology" element={<Technology />} />
           <Route path="/life-log" element={<LifeLog />} />
-          <Route path="/community" element={<Community />} />
+          <Route path="/results" element={<Results />} />
         </Routes>
 
         {/* Footer */}
