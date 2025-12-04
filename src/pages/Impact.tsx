@@ -1,4 +1,4 @@
-export default function Community() {
+export default function Impact() {
   return (
     <div className="flex flex-col" style={{ height: "calc(100vh - 64px)" }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
